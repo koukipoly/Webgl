@@ -171,7 +171,7 @@ async function timein(){
         i--;
     }
     gameStat="over";
-    if(i==0){
+    if(i==-1){
         text.innerText="You lose";
     }
 }
