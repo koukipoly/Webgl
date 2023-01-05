@@ -71,7 +71,8 @@ class Doll{
         setTimeout(()=>isLookingBackward = true, 150)
     }
 
-    lookForward(){setTimeout(()=>isLookingBackward = false, 50)
+    lookForward(){
+        setTimeout(()=>isLookingBackward = false, 50)
         gsap.to(this.doll.rotation, {y: 0, duration: .45})
         
     }
@@ -163,9 +164,9 @@ function startGame(){
 // This is the function that will make the game over (player lost), if player runs out of time
 async function timein(){
     await delay(2000)
-    let i=17;
+    let i=15;
     while( i>=0 && gameStat!="over"){
-        await delay(100)
+        await delay(1000)
         text2.innerText=i;
         i--;
     }
@@ -211,3 +212,4 @@ window.addEventListener('keyup', (e) =>{
         player.stop()
     }
 })
+
